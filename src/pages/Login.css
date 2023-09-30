@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.login-image{
+    width: 50%;
+    height: 100vh;
+    background-image: url(../assets/signInImage.png);
+}
+.login-text{
+    width: 50%;
+    height: 100vh;
+    background-color: #080c2b;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    padding: 150px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.login-text h1{
+    font-size: 30px;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+.login-text h2{
+    font-size: 15px;
+    font-weight: 200;
+    padding-bottom: 60px;
+}
+.login-text h3{
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+.login-text input{
+    width: 300px;
+    background-color:#0f1535;
+    opacity: 1;
+    height: 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    border: 2px solid #434a61;
+    color: white;
+    padding: 15px;
+    outline: none;
+}
+input:active, input:scope{
+    border: 2px solid blue;
+}
+::placeholder{
+    color: #434a61;
+    opacity: 1;
+}
+.login-text button{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #0075ff;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-top: 20px;
+}
+
+.login-text h4{
+    color: #848fa3;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    width: 300px;
+    margin-top: 20px;
+}
+.login-text h4 a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
