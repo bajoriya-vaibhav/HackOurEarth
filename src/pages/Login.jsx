@@ -1,6 +1,7 @@
 import React from 'react'
 import './Login.css'
 import { Link } from 'react-router-dom'
+import Signup from './Signup'
 
 const Login = () => {
   return (
@@ -15,7 +16,7 @@ const Login = () => {
             <h3>Password</h3>
             <input type="password" placeholder='Password...' />
             <button>Sign In</button>
-            <h4>Dont have an account?  <Link>Sign Up</Link> </h4>
+            <h4>Dont have an account?  <Link to='/signup'>Sign Up</Link> </h4>
       </div>
     </div>
   )
