@@ -51,21 +51,23 @@ UserRouter.delete('/logout', async (req, res) => {
 UserRouter.post('/login', async (req, res) => {
   const username = req.body.name;
   const user = await getUser(username);
-  if (user) {
-    console.log(user);
-    const accessToken = jwt.sign({ name: user.name, Email:user.Email ,password: user.password }, process.env.ACCESS_TOKEN_SECRET);
-    const status = await User.findOneAndUpdate({ name: user.name }, { token: accessToken });
-    res.json(accessToken);
-    return;
-  }
   if(user && req.body.password !== user.password){
     console.log("Wrong password!")
     res.send(false);
     return;
   }
+  if (user) {
+    console.log(user);
+    const accessToken = jwt.sign({ name: user.name, Email:user.Email ,password: user.password }, process.env.ACCESS_TOKEN_SECRET);
+    const status = await User.findOneAndUpdate({ name: user.name }, { token: accessToken });
+    // res.json(accessToken);
+    res.send(true);
+    return;
+  }
+  
   if (user === null)
       console.log("Please signup")
-  else res.send(null); // if false , wrong credentials if null, username doesnt exist.
+  res.send(null); // if false , wrong credentials if null, username doesnt exist.
 
 });
 
