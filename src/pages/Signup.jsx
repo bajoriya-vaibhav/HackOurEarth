@@ -13,7 +13,19 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const navigate = useNavigate();
+  const isValidEmail = (inputValue) => {
+    let emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+    if (!emailRegex.test(inputValue)) {
+      return false;
+    } else {
+      return true;
+    }
+  }
   const checkSignUp = async (userData) => {
+    if (!isValidEmail(userData.Email) || userData.password == '' || userData.Email == '' || userData.name =='') {
+      alert('Please enter valid credentials');
+      return;
+    }
     try {
       const response = await axios.post('http://localhost:5000/users/signup', userData);
       const isUsername = response.data;
