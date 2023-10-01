@@ -7,7 +7,7 @@ import FloatingNav from '../components/FloatingNav'
 const Login = () => {
   return (
     <div className='login'>
-      <FloatingNav/>
+      <FloatingNav className="fl-nav" />
       <div className='login-image'>
       </div>
       <div className='login-text'>
