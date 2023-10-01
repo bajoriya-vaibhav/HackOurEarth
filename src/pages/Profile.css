@@ -1,0 +1,58 @@
+.profile-bg{
+    width: 100vw;
+    height: 100vh;
+}
+.welcome{
+    display: flex;
+    padding: 30px;
+    padding-inline: 60px;
+    
+    gap: 60px;
+
+}
+.welcomecard{
+    background-image: url(../assets/welcome-profile.webp);
+    width: 553px;
+    height: 456px;
+    border-radius: 20px;
+    padding: 40px;
+}
+.welcomecard h1{
+    font-size: 35px;
+    color: white;
+    font-weight: 700;
+}
+.welcomecard h2{
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+}
+.detailscard{
+    background-color: #0e0f29;
+    border-radius: 20px;
+    padding: 40px;
+}
+.detailscard h1{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.detailscard h2{
+    margin-bottom: 50px;
+}
+.detailscard h3{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.detailscard h3 span{
+    font-weight: 700;
+    color: white;
+}
+.projects{
+    background-color:#0e0f29;
+    border-radius: 20px;
+    margin-inline: 60px;
+    padding: 40px;
+    color: white;
+}

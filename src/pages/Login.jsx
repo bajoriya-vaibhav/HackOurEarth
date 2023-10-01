@@ -2,10 +2,12 @@ import React from 'react'
 import './Login.css'
 import { Link } from 'react-router-dom'
 import Signup from './Signup'
+import FloatingNav from '../components/FloatingNav'
 
 const Login = () => {
   return (
     <div className='login'>
+      <FloatingNav/>
       <div className='login-image'>
       </div>
       <div className='login-text'>
