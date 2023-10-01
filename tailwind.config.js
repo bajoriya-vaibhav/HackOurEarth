@@ -14,6 +14,12 @@ export default {
         'waterlight':'#051E8E',
         "purple1":'#080D2C',
         "purple2":'#1B2063',
+        "navybluedark":'#070C28',
+        "navyblue":'#0A0E2D',
+        "bluedark2":'#080C2E',
+        "blue2":'#171D4C',
+        "bluedark3":'#090F30',
+        "blue3":'#1D2863',
       },
     }
   },
