@@ -37,7 +37,6 @@ const Signup = () => {
         alert('Username already taken');
       }
     } catch (error) {
-      // Handle any errors that occur during the server request
       console.error('Error during sign-up:', error);
       alert(error);
     }
