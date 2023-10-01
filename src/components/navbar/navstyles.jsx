@@ -20,7 +20,7 @@ export const Searchbar = () =>{
   return(
     <>
     <form className='flex m-0 p-0 rounded-2xl min-height min-h-0 h-12 flex items-center w-full'>
-      <input type="text" placeholder="Type here..." className="input min-h-0 h-8 w-full" />
+      <input type="text" placeholder="Type here..." className="input min-h-0 h-8 w-full bg-transparent" />
       <button className="btn btn-ghost btn-circle -ml-12 hover:bg-transparent hover:opacity-50"><FaMagnifyingGlass/></button>
     </form>
     </>

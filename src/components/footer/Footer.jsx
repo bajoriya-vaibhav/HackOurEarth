@@ -1,23 +1,13 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
+import styles from '../../styles/styles';
 
 const Footer = () => {
   const location = useLocation();
-  return ((location.pathname != '/signup' && location.pathname != '/signin' && location.pathname != '/dashboard') &&
+  return ((location.pathname != '/signup' && location.pathname != '/signin') &&
     <div>
-      <footer className="footer p-10 bg-transparent text-base-content text-white sm:grid-cols-2">
-        <nav>
-          <header className="footer-title">Services</header> 
-          <a className="link link-hover">A1</a>
-          <a className="link link-hover">A2</a> 
-          <a className="link link-hover">A3</a> 
-        </nav> 
-        <nav>
-          <header className="footer-title">Company</header> 
-          <a className="link link-hover">About us</a> 
-          <a className="link link-hover">Contact</a> 
-          <a className="link link-hover">Blogs</a>
-        </nav> 
+      <footer className="footer py-4 text-base-content text-white sm:grid-cols-2 bg-purple1 flex justify-between px-20 items-end">
+        <div className={`${styles.textXl} text-white`}>@2023,Made with ❤️ by HackOurEarth for a better open source World</div>
         <nav>
           <header className="footer-title">Social</header> 
           <div className="grid grid-flow-col gap-4">
