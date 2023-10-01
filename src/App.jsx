@@ -6,12 +6,14 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Profile from './pages/Profile'
 import Dashboard from './pages/Dashboard'
+import Global from './context/Global'
 
 function App() {
 
   return (
     <div className='m-0'>
     <Router>
+    <Global>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
@@ -19,6 +21,7 @@ function App() {
         <Route path='/profile' element={<Profile/>}/>
         <Route path='/dashboard' element={<Dashboard/>}/>
       </Routes>
+    </Global>
     </Router>
     </div>
   )

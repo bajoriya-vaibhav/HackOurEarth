@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Nav from '../components/navbar/Nav'
 import {staggerContainer, textVariant } from '../utils/motion';
 import { motion } from 'framer-motion';
@@ -6,7 +6,9 @@ import styles from '../styles/styles'
 import About from '../components/About'
 import Footer from '../components/footer/Footer';
 import Button from '@mui/material/Button'
+import { GlobalContext } from '../context/Global';
 const Home = () => {
+  const {user,setUser,handleExplore} = useContext(GlobalContext);
   return (
     <div className='relative bg-gradient-to-r from-waterdark to-waterlight'>
       <div >
@@ -34,7 +36,7 @@ const Home = () => {
                 <h2 className='text-2xl font-light text-white leading-loose'>Connect and Collaborate with others</h2>
               </motion.div>
               <motion.h2 variants={textVariant(1.3)} className='text-2xl font-light text-white leading-loose'>
-                <Button variant="contained">Explore More</Button>
+                <Button variant="contained" onClick={()=>handleExplore(user)}>Explore More</Button>
               </motion.h2>
             </div>
           </motion.div>
