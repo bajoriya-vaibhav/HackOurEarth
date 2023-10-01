@@ -1,0 +1,42 @@
+.fl-nav-container{
+    top: 30px;
+    left: 24%;
+    position: absolute;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    width: 52%;
+    height: 75px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(40px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    z-index: 8;
+}
+li{
+    list-style: none;
+}
+.fl-nav-heading{
+    align-items: center;
+    justify-content: flex-start;
+    width: 20%;
+    padding: 20px;
+}
+.nav-list{
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+.nav-list ul{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+a:hover{
+    cursor: pointer;
+}
