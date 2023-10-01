@@ -6,11 +6,14 @@ import FloatingNav from '../components/FloatingNav'
 import axios from 'axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { GlobalContext } from '../context/Global'
 
 const Login = () => {
   const [name, setName] = useState('');
   const [pass, setPass] = useState('');
   const navigate = useNavigate();
+  const {setActive} = useContext(GlobalContext)
 
   const checkLogin = async(userData)=>{
     const isValid =await axios.post('http://localhost:5000/users/login',userData)
@@ -19,6 +22,7 @@ const Login = () => {
       alert('Please check you password');
     }
     else if(check){
+      setActive(true)
       alert('Logged in successfully');
       navigate('/dashboard');
     }
